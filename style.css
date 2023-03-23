@@ -1,15 +1,17 @@
 @@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
-/* RESET */ 
-*{
+/* ------------- RESET ------------- */
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 
-/* ROOT */
-:root{
+/* ------------- ROOT ------------- */
+
+:root {
     --SoftBlue: hsl(215, 51%, 70%);
     --Cyan: hsl(178, 100%, 50%);
     --VeryDarkBlue-main-BG: hsl(217, 54%, 11%);
@@ -19,25 +21,30 @@
 }
 
 
-/* BODY */
-html,body{
-    height: 100vh;
-    width: 100vw;
+/* ------------- BODY ------------- */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
-html{
+
+html {
     font-size: 10px;
 }
-body{
+
+body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--VeryDarkBlue-main-BG);
     display: grid;
     justify-items: center;
-    align-items: center;
+    align-content: center;
 }
 
 
-/* CONTAINER */
-.container{
+/* ------------- CONTAINER ------------- */
+
+.container {
     background-color: var(--VeryDarkBlue-card-BG);
     border-radius: 10px;
     font-size: 18px;
@@ -45,8 +52,8 @@ body{
     height: 543px;
 }
 
-.container__image{
-    background-image: url(./images//image-equilibrium.jpg);
+.container__image {
+    background-image: url(./images/image-equilibrium.jpg);
     background-size: cover;
     border-radius: 10px;
     margin: 24px;
@@ -54,14 +61,25 @@ body{
     height: 277px;
 }
 
-.container__title{
+.container_image2 {
+    background-color: hsla(178, 100%, 50%, 0.288);
+    background-image: url(./images/icon-view.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.container__title {
     color: var(--White);
     padding-left: 24px;
-    font-size: 20px;  
+    font-size: 20px;
     font-weight: 600;
 }
 
-.container__text{
+.container__text {
     color: var(--SoftBlue);
     padding: 0 24px;
     line-height: 22px;
@@ -72,92 +90,104 @@ body{
 .container__info {
     color: var(--SoftBlue);
     display: flex;
-    gap: 44px;
-    font-size: 1.6rem;
+    gap: 50px;
 }
-.container__info>div{
+
+.container__info>div {
     display: flex;
     align-items: center;
     gap: 5px;
     margin: 0 24px;
     height: 20px;
 }
-.ethereum {
-    background-image: url(./images/icon-ethereum.svg);
-    width: 11px;
-    height: 18px;
-}
-.clock{
-    background-image: url(./images/icon-clock.svg);
-    background-size: cover;
-    width: 15px;
-    height: 15px;
+
+.container__info>div>p {
+    font-size: 1.5rem;
 }
 
-hr{
+.container__info>div>span {
+    color: var(--Cyan);
+    font-size: 1.5rem;
+}
+
+.ethereum {
+    background-image: url(./images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 19px;
+}
+
+.clock {
+    background-image: url(./images/icon-clock.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 17px;
+    height: 17px;
+}
+
+hr {
     width: 278px;
-    margin: 16px 24px 0 24px;
+    margin: 16px 24px 10px 24px;
     border-color: var(--VeryDarkBlue-line);
 }
 
-.container__creator{
+.container__creator {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.container__photo{
+
+.container__photo {
     background-image: url("./images/image-avatar.png");
     background-size: cover;
-    margin: 16px 16px 24px 24px; 
+    margin: 0 12px 0 24px;
     width: 33px;
     height: 33px;
     border-radius: 50%;
     border: solid 1px white
 }
-.container__creator span{
+
+.container__creator span {
     color: var(--SoftBlue);
     font-size: 15px;
 }
 
-.container__name{
+.container__name {
     color: var(--White);
     font-size: 15px;
 }
 
-.attribution { 
-    font-size: 11px; 
-    text-align: center; 
+
+/* ------------- CONTAINER:HOVER ------------- */
+
+.container__image:hover .container_image2 {
+    cursor: pointer;
+    visibility: visible;
 }
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+
+.container__title:hover {
+    cursor: pointer;
+    color: var(--Cyan);
 }
 
-/* ---------- */
-
-@media (min-width: 1440px){
-    .container_image2{
-        background-color: hsla(178, 100%, 50%, 0.288);
-        background-image: url(./images/icon-view.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        border-radius: 10px;
-        height: 100%;
-        width: 100%;
-        visibility: hidden;
-    }
-
-    .container__image:hover .container_image2{
-        cursor: pointer;
-        visibility: visible;
-    }
-    
-    .container__title:hover{
-        cursor: pointer;
-        color: var(--Cyan) ;
-    }
-
-    .container__name:hover{
-        cursor: pointer;
-        color: var(--Cyan) ;
-    }
+.container__name:hover {
+    cursor: pointer;
+    color: var(--Cyan);
 }
+
+
+/* ------------- ATRIBUTION ------------- */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* ------------------------------------- */
+
+@media (min-widht: 1440px) {}
